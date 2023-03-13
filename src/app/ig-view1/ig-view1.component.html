@@ -1,0 +1,74 @@
+<div class="row-layout group">
+  <div class="column-layout group_1">
+    <div class="column-layout group_2">
+      <div class="row-layout header">
+        <div class="row-layout page-title">
+          <div class="row-layout group_3">
+            <img src="/assets/Accounts Icon - Green.svg" class="image" />
+          </div>
+          <h6 class="h6">
+            Събития 
+          </h6>
+        </div>
+        <div class="row-layout buttons">
+          <button igxButton="flat" igxRipple class="button">
+            <igx-icon>
+              plus_one
+            </igx-icon>
+            <span>Добави събитие </span>
+          </button>
+        </div>
+      </div>
+      <div class="row-layout filters-and-sorting">
+        <div class="row-layout group_4">
+          <igx-select type="box" value="2" class="select">
+            <igx-select-item value="1">
+              Запазени събития
+            </igx-select-item>
+            <igx-select-item value="2" [selected]="true">
+              Всички събития
+            </igx-select-item>
+          </igx-select>
+          <igx-input-group type="box" class="input">
+            <igx-prefix>
+              <igx-icon class="icon">
+                search
+              </igx-icon>
+            </igx-prefix>
+            <input type="text" placeholder="Търси" igxInput />
+          </igx-input-group>
+        </div>
+        <div class="row-layout group_5">
+          <button igxButton="flat" igxRipple [igxToggleAction]="dropdown" class="button_1">
+            <span>Сортирай по:</span>
+            <igx-icon>
+              keyboard_arrow_down
+            </igx-icon>
+          </button>
+          <igx-drop-down #dropdown class="dropdown">
+            <igx-drop-down-item>
+              Име
+            </igx-drop-down-item>
+            <igx-drop-down-item>
+              Последно добавени
+            </igx-drop-down-item>
+            <igx-drop-down-item>
+              Дата
+            </igx-drop-down-item>
+            <igx-drop-down-item>
+              Местоположение
+            </igx-drop-down-item>
+          </igx-drop-down>
+        </div>
+      </div>
+    </div>
+    <igx-grid [data]="northwindCustomers" primaryKey="contactName" displayDensity="cosy" [allowFiltering]="true" filterMode="excelStyleFilter" height="696px">
+      <igx-column field="customerID" dataType="string" header="Дата" [sortable]="true" [selectable]="false"></igx-column>
+      <igx-column field="address.street" dataType="string" header="Спорт" [sortable]="true" [selectable]="false"></igx-column>
+      <igx-column field="companyName" dataType="string" header="Име на събитието" [sortable]="true" [selectable]="false"></igx-column>
+      <igx-column field="address.city" dataType="string" header="Град" [sortable]="true" [selectable]="false"></igx-column>
+      <igx-column field="contactTitle" dataType="string" header="Адрес" [sortable]="true" [selectable]="false"></igx-column>
+      <igx-column field="address.phone" dataType="string" header="Контакти" [sortable]="true" [selectable]="false"></igx-column>
+    </igx-grid>
+  </div>
+</div>

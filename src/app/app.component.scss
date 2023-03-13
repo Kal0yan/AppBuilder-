@@ -1,0 +1,113 @@
+:host {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+}
+.row-layout {
+  display: flex;
+}
+.group {
+  background-color: hsla(var(--igx-grays-900));
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  min-height: 56px;
+}
+.group_1 {
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  width: 56px;
+  height: 56px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_2 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  width: 100%;
+  height: 987px;
+  min-height: 50px;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.group_3 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_4 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  height: 839px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.navbar {
+  --igx-navbar-background: hsla(var(--igx-primary-500));
+  --igx-navbar-text-color: hsla(var(--igx-surface-500));
+  width: 1900px;
+  height: max-content;
+  min-width: min-content;
+}
+.nav-drawer {
+  min-width: min-content;
+  min-height: 0;
+  flex-shrink: 0;
+}
+.view-container {
+  overflow: auto;
+  position: relative;
+  width: 1480px;
+  height: 839px;
+}
+.text {
+  text-align: center;
+  width: 1699px;
+  height: max-content;
+  min-width: min-content;
+}
+.icon {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  color: hsla(var(--igx-surface-500));
+}
+.avatar {
+  background-color: hsla(var(--igx-surface-500));
+  --background: none;
+  --ig-gray-400: transparent;
+}
+.icon_1 {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+.button {
+  color: hsla(var(--igx-surface-500));
+}
+.switch {
+  left: 29.947368421052666px;
+  bottom: 33.31578947368419px;
+  position: absolute;
+  width: max-content;
+  height: max-content;
+}
+.list {
+  height: max-content;
+}

@@ -1,0 +1,144 @@
+<div class="row-layout group">
+  <igx-navbar class="navbar">
+    <igx-navbar-title>
+      <p class="text">
+        Спортните събития за 2023г.
+      </p>
+    </igx-navbar-title>
+    <button igxButton="icon" igxRipple class="button">
+      <igx-icon>
+        search
+      </igx-icon>
+    </button>
+    <button igxButton="icon" igxRipple class="button">
+      <igx-icon>
+        settings
+      </igx-icon>
+    </button>
+  </igx-navbar>
+  <div class="row-layout group_1">
+    <igx-icon class="icon">
+      menu
+    </igx-icon>
+  </div>
+</div>
+<div class="row-layout group_2">
+  <div class="column-layout group_3">
+    <igx-nav-drawer [isOpen]="true" [pin]="true" [pinThreshold]="900" width="200px" class="nav-drawer">
+      <ng-template igxDrawer>
+        <igx-list class="list">
+          <igx-list-item [isHeader]="false" routerLink="/ig-view">
+            <span igxListThumbnail>
+              <igx-avatar src="/assets/Home-Avatar-Icon.svg" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>Начало</span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false" routerLink="/ig-view1">
+            <span igxListThumbnail>
+              <igx-avatar src="/assets/Accounts-Avatar-Icon.svg" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>Събития </span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false" routerLink="/ig-view2">
+            <span igxListThumbnail>
+              <igx-avatar src="/assets/Accounts-Avatar-Icon.svg" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>Новини</span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false" routerLink="/ig-view3">
+            <span igxListThumbnail>
+              <igx-avatar src="/assets/Contacts-Avatar-Icon.svg" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>Контакти</span>
+          </igx-list-item>
+        </igx-list>
+      </ng-template>
+    </igx-nav-drawer>
+    <igx-switch class="switch">
+      Нощен режим
+    </igx-switch>
+  </div>
+  <div class="column-layout group_4">
+    <div class="view-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="column-layout group_3">
+    <igx-nav-drawer [isOpen]="true" [pin]="true" [pinThreshold]="1024" width="230px" class="nav-drawer">
+      <ng-template igxDrawer>
+        <div igxDrawerItem igxRipple>
+          <igx-icon class="icon_1">
+            label_important
+          </igx-icon>
+          <span>Януари </span>
+        </div>
+        <div igxDrawerItem igxRipple>
+          <igx-icon class="icon_1">
+            label_important
+          </igx-icon>
+          <span>Февруари</span>
+        </div>
+        <div igxDrawerItem igxRipple>
+          <igx-icon class="icon_1">
+            label_important
+          </igx-icon>
+          <span>Март</span>
+        </div>
+        <div igxDrawerItem igxRipple>
+          <igx-icon class="icon_1">
+            label_important
+          </igx-icon>
+          <span>Април</span>
+        </div>
+        <div igxDrawerItem igxRipple>
+          <igx-icon class="icon_1">
+            label_important
+          </igx-icon>
+          <span>Май</span>
+        </div>
+        <div igxDrawerItem igxRipple>
+          <igx-icon class="icon_1">
+            label_important
+          </igx-icon>
+          <span>Юни</span>
+        </div>
+        <div igxDrawerItem igxRipple>
+          <igx-icon class="icon_1">
+            label_important
+          </igx-icon>
+          <span>Юли</span>
+        </div>
+        <div igxDrawerItem igxRipple>
+          <igx-icon class="icon_1">
+            label_important
+          </igx-icon>
+          <span>Август</span>
+        </div>
+        <div igxDrawerItem igxRipple>
+          <igx-icon class="icon_1">
+            label_important
+          </igx-icon>
+          <span>Септември</span>
+        </div>
+        <div igxDrawerItem igxRipple>
+          <igx-icon class="icon_1">
+            label_important
+          </igx-icon>
+          <span>Октомври</span>
+        </div>
+        <div igxDrawerItem igxRipple>
+          <igx-icon class="icon_1">
+            label_important
+          </igx-icon>
+          <span>Ноември</span>
+        </div>
+        <div igxDrawerItem igxRipple>
+          <igx-icon class="icon_1">
+            label_important
+          </igx-icon>
+          <span>Декември</span>
+        </div>
+      </ng-template>
+    </igx-nav-drawer>
+  </div>
+</div>

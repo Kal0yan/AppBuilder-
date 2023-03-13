@@ -1,0 +1,112 @@
+<div class="row-layout group">
+  <div class="column-layout group_1">
+    <div class="column-layout group_2">
+      <p class="text">
+        Тази седмица
+      </p>
+      <div class="column-layout group_3">
+        <igx-list class="list">
+          <igx-list-item [isHeader]="false" *ngFor="let item of northwindCustomers">
+            <span igxListThumbnail>
+              <igx-avatar src="/assets/Account-List-Avatar-Icon.svg" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLine>
+              <div class="column-layout group_4">
+                <a target="_blank" class="igx-typography__body-2 hyperlink">
+                  {{ item.companyName }}
+                </a>
+                <p class="igx-typography__subtitle-2 text_1">
+                  {{ item.contactName }}
+                </p>
+                <div class="row-layout group_5">
+                  <p class="igx-typography__caption text_2">
+                    {{ item.address.street }}
+                  </p>
+                  <p class="igx-typography__caption text_3">
+                    ,
+                  </p>
+                  <p class="igx-typography__caption text_2">
+                    {{ item.address.city }}
+                  </p>
+                  <p class="igx-typography__caption text_3">
+                    ,
+                  </p>
+                  <p class="igx-typography__caption text_2">
+                    {{ item.address.country }}
+                  </p>
+                </div>
+                <p class="igx-typography__caption text_2">
+                  {{ item.address.phone }}
+                </p>
+              </div>
+            </span>
+          </igx-list-item>
+        </igx-list>
+      </div>
+      <a target="_blank" routerLink="/ig-view1" class="igx-typography__body-2 hyperlink_1">
+        Виж всички
+      </a>
+    </div>
+    <div class="column-layout group_6">
+      <p class="text">
+        Събития
+      </p>
+      <igx-grid [data]="northwindCustomers" primaryKey="customerID" displayDensity="cosy" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid">
+        <igx-column field="contactName" dataType="string" header="contactName" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="contactTitle" dataType="string" header="contactTitle" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="address.street" dataType="string" header="street" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="address.city" dataType="string" header="city" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="address.region" dataType="string" header="region" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="address.postalCode" dataType="string" header="postalCode" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="address.country" dataType="string" header="country" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="address.phone" dataType="string" header="phone" [sortable]="true" [selectable]="false"></igx-column>
+      </igx-grid>
+      <a target="_blank" class="igx-typography__body-2 hyperlink_2">
+        Виж всички
+      </a>
+    </div>
+  </div>
+  <div class="column-layout group_7">
+    <div routerLink="/ig-view2" class="row-layout group_8">
+      <p class="text">
+        Новини
+      </p>
+      <igx-list class="list_1">
+        <igx-list-item [isHeader]="false" *ngFor="let item of cRMAppMeetingsTasks">
+          <span igxListThumbnail>
+            <igx-avatar src="/assets/Calendar-Avatar-Icon.svg" class="avatar_1"></igx-avatar>
+          </span>
+          <span igxListLine>
+            <div class="column-layout group_4">
+              <div class="row-layout group_9">
+                <p class="igx-typography__subtitle-2 text_1">
+                  Meeting with 
+                </p>
+                <p class="igx-typography__subtitle-2 text_1">
+                  {{ item.Contact }}
+                </p>
+              </div>
+              <div class="row-layout group_10">
+                <p class="igx-typography__caption text_2">
+                  {{ item.MeetingDate }}
+                </p>
+                <p class="igx-typography__caption text_2">
+                  -
+                </p>
+                <p class="igx-typography__caption text_2">
+                  {{ item.MeetingTime }}
+                </p>
+              </div>
+              <igx-chip class="chip">
+                {{ item.MeetingType }}
+              </igx-chip>
+            </div>
+          </span>
+        </igx-list-item>
+      </igx-list>
+    </div>
+    <div class="row-layout group_11">
+      <igx-calendar [weekStart]="1" [showWeekNumbers]="true" [hasHeader]="true" [vertical]="false" class="calendar"></igx-calendar>
+    </div>
+  </div>
+</div>
